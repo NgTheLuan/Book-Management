@@ -46,4 +46,6 @@ testem.log
 Thumbs.db
 
 .firebase
-.e2s
+/e2s
+.firebaserc
+firebase.json
