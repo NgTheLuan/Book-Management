@@ -1,0 +1,80 @@
+.card-img {
+    float: left;
+    width: 350px;
+}
+
+h4 {
+    color: #ff9e0f;
+    font-weight: bold;
+}
+
+h5 {
+    margin-left: 120px;
+    font-style: italic;
+}
+
+
+/* .card-title1,
+.card-title2,
+.card-title3,
+.card-title4,
+.card-title5,
+.card-title6 {
+    font-size: 18px;
+} */
+
+p {
+    text-align: justify;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+card-body a {
+    margin-left: 18px;
+}
+
+.row {
+    color: gray;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
+.col-md-6 .card-img {
+    margin-left: 15%;
+}
+
+.card-img-top1 {
+    width: 90%;
+    padding-left: 10%;
+}
+
+.card-img-top2 {
+    width: 105%;
+}
+
+.card-img-top3 {
+    width: 80%;
+    padding-left: 5%;
+}
+
+.card-img-top4 {
+    width: 80%;
+}
+
+.card-img4 {
+    margin-left: 10%;
+}
+
+.card-img5 {
+    margin-left: 5%;
+}
+
+.card-img-top5 {
+    width: 60%;
+}
+
+.pagination {
+    padding-left: 40%;
+}

@@ -1,0 +1,174 @@
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title ">Table Furniture</h4>
+            <p class="card-category"> Table of detailed furniture</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                        <th class="nosort" width="5%">
+                            <!-- <label class="custom-control custom-checkbox m-0">
+                                      <input type="checkbox" class="custom-control-input" id="selectall" name="" value="option2">
+                                      <span class="custom-control-label">&nbsp;</span>
+                                  </label> -->
+                        </th>
+                        <th>Code</th>
+                        <th>Trademark</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Material</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody class="text-primary1">
+                        <tr *ngFor="let item of items">
+                            <td>
+                                <label class="custom-control custom-checkbox">
+                                          <input type="checkbox"  class="check-input" (click)="editItem($event,item)">
+                                          <span class="check-label"></span>
+                                </label>
+                            </td>
+
+                            <td>{{item.Code}}</td>
+                            <td>{{item.Trademark}}</td>
+                            <td>{{item.Type}}</td>
+                            <td>{{item.Name}}</td>
+                            <td>{{item.Material}}</td>
+                            <td>{{item.Size}}</td>
+                            <td>{{item.Price}}</td>
+                            <td [ngStyle]="{'background-color':getColor(item.Status)}" class="dot"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div *ngFor="let item of items">
+        <div *ngIf="editState && itemToEdit.Code == item.Code">
+            <form (ngSubmit)="updateItem(item)">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="contact-info">
+                            <h3>FURNITURE DETAIL</h3>
+                            <img src="https://otobi.com/admin/assets/img/slider/66b5faa5651aa36d4361ea0d62df448b.png" width="100%" height="110%">
+                            <p>"I don't believe in the so-called perfect home, but I believe in the perfect emotion you have for that house."</p>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="contact-form">
+                            <i (click)="clearState()" class="glyphicon glyphicon-remove zoom"></i>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Code:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Code" name="Code" type="text" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Trademark:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Trademark" name="Trademark" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Type:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Type " name="Type" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Name:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Name" name="Name" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Material:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Material " name="Material" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Size:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Size " name="Size" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Price:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Price " name="Price" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg">Status:</label>
+                                <div class="col-sm-10">
+                                    <input [(ngModel)]="item.Status" name="Status" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-content">
+                        <button routerLink="/admin/add-item" class="btn btn-info">Add</button>
+                        <button (click)="deleteItem($event, item)" class="btn btn-danger">Delete</button>
+                        <button type="submit" value="Update" class="btn btn-orange">UPDATE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div *ngIf="items?.length> 0; else noItems">
+            <!-- <ul *ngFor="let item of items" class="collection">
+        <li class="collection-item">{{item.Name}}</li>
+    </ul> -->
+        </div>
+        <ng-template #noItems>
+            <hr>
+            <h5>There are no items to list</h5>
+        </ng-template>
+    </div>

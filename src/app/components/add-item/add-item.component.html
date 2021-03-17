@@ -1,0 +1,54 @@
+<div class="card">
+    <div class="card-content">
+        <form (ngSubmit)="onSubmit()" class="form-row ">
+            <h2>Add Books</h2>
+            <div class="row">
+
+                <div class="input-field col-6">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Trademark" name="Trademark">
+                        <label>Trademark</label>
+                    </div>
+                </div>
+                <div class="input-field col-6">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Type" name="Type">
+                        <label>Type</label>
+                    </div>
+                </div>
+                <div class="input-field col-12">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Name" name="Name">
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="input-field col-4">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Material" name="Material">
+                        <label>Material</label>
+                    </div>
+                </div>
+                <div class="input-field col-4">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Size" name="Size">
+                        <label>Size</label>
+                    </div>
+                </div>
+                <div class="input-field col-4">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Price" name="Price">
+                        <label>Price</label>
+                    </div>
+                </div>
+                <div class="input-field col-4">
+                    <div class="input-field">
+                        <input type="text" [(ngModel)]="item.Status" name="Status">
+                        <label>Status</label>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="btn center">
+            <button class="btn btn-warning" routerLink="/items">Cancel</button>
+        </form>
+    </div>
+</div>

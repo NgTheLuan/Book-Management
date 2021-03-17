@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 banner-sec">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <div class="inner">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 login-sec">
+            <h2 class="text-center">Login Now</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label class="bmd-label-floating">EMAIL</label>
+                    <input type="email" class="form-control" formControlName="email">
+                    <div *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty ||loginForm.controls.email.touched)">
+                        <small *ngIf="loginForm.controls.email.errors.required" class="text-danger">Email is required.</small>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="bmd-label-floating">PASSWORD</label>
+                    <input type="password" class="form-control " formControlName="password">
+                    <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty ||loginForm.controls.password.touched)">
+                        <small *ngIf="loginForm.controls.password.errors.required" class="text-danger">Password is required.</small>
+                    </div>
+                </div>
+
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" >
+                        <small>Forgot your password</small>
+                    </label>
+                    <div class="btn-firebase">
+                        <button type="button" class="btn btn-warning btn-block" (click)="loginWithFirebase()" [disabled]="loginForm.invalid"> <img src="https://miro.medium.com/max/1024/1*HaAps8GidfAKdee7OrjZ2w.png" alt="firebase" class="firebase">Login with FireBase</button>
+                    </div>
+                    <div class="btn-google">
+                        <button type="button" class="btn btn-danger btn-block" (click)="loginWithGoogle()"> <img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="google" class="google">Login with Google</button>
+                    </div>
+                </div>
+
+            </form>
+            <!-- <div class="copy-text">Created with <i class="fa fa-heart"></i> by Grafreez</div> -->
+        </div>
+    </div>

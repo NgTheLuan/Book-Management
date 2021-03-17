@@ -1,0 +1,90 @@
+/* * {
+    margin: 5px auto;
+    text-align: center;
+} */
+
+.secondary-content .zoom {
+    margin-right: 20px;
+}
+
+
+/* .book-table th {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+} */
+
+.card .card-body .table-responsive .table .text-primary th {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card .card-body .table-responsive .table .text-primary1 tr td {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 1%;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 11%;
+    margin-left: 30%;
+}
+
+.secondary-content .btn {
+    width: 90px;
+    margin-left: 10px;
+}
+
+.col-md-3 {
+    background-color: skyblue;
+}
+
+.col-md-3 .contact-info h3 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.col-md-3 .contact-info p {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 160%;
+    color: #B86E3D;
+}
+
+.col-md-9 .contact-form .form-group .control-label {
+    color: rgb(44, 44, 235);
+    font-size: 100%;
+}
+
+.col-md-9 .contact-form .form-group .col-sm-10 {
+    color: gray;
+}
+
+.zoom {
+    padding-left: 80%;
+    font-size: 24px;
+    color: red;
+    padding-top: 2%;
+}
+
+.secondary-content .btn-info {
+    margin-left: 450px;
+}
+
+.secondary-content .btn {
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+.col-md-12 {
+    padding-top: 3%;
+}

@@ -1,0 +1,81 @@
+<div class="col-12">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Create Account</h4>
+            <p class="card-category">Complete your account</p>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">First Name</label>
+                            <input type="text" class="form-control" formControlName="firstname">
+                            <div *ngIf="registerForm.controls.firstname.invalid && (registerForm.controls.firstname.dirty ||registerForm.controls.firstname.touched)">
+                                <small *ngIf="registerForm.controls.firstname.errors.required" class="text-danger">First Name is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Last Name</label>
+                            <input type="text" class="form-control" formControlName="lastname">
+                            <div *ngIf="registerForm.controls.lastname.invalid && (registerForm.controls.lastname.dirty ||registerForm.controls.lastname.touched)">
+                                <small *ngIf="registerForm.controls.lastname.errors.required" class="text-danger">Last Name is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Email</label>
+                            <input type="email" class="form-control" formControlName="email">
+                            <div *ngIf="registerForm.controls.email.invalid && (registerForm.controls.email.dirty ||registerForm.controls.email.touched)">
+                                <small *ngIf="registerForm.controls.email.errors.required" class="text-danger">Email is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Password</label>
+                            <input type="password" class="form-control" formControlName="password">
+                            <div *ngIf="registerForm.controls.password.invalid && (registerForm.controls.password.dirty ||registerForm.controls.password.touched)">
+                                <small *ngIf="registerForm.controls.password.errors.required" class="text-danger">Password is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Repeat Pasword</label>
+                            <input type="password" class="form-control" formControlName="confirmpassword">
+                            <div *ngIf="registerForm.controls.confirmpassword.invalid && (registerForm.controls.confirmpassword.dirty ||registerForm.controls.confirmpassword.touched)">
+                                <small *ngIf="registerForm.controls.confirmpassword.errors.required" class="text-danger">Confirm Password is required.</small>
+                                <small *ngIf="registerForm.controls.confirmpassword.errors.mustMatch" class="text-danger">Confirm Password is not match.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <input type="submit" class="btn btn-primary pull-right" value="Create Account" [disabled]="registerForm.invalid"> -->
+                <button class="btn btn-primary btn-user btn-block" (click)="createAccount()" [disabled]="registerForm.invalid">Create with FireBase</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
