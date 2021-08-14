@@ -60,3 +60,6 @@ tsconfig.app.json
 tsconfig.
 tsconfig.spec.json
 tslint.json
+
+/src/environments/environment.prod.ts
+/src/environments/environment.ts
