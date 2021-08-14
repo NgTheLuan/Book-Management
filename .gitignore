@@ -49,3 +49,14 @@ Thumbs.db
 firebase.json
 .firebaserc
 /e2e
+
+.editorconfig
+.firebaserc
+browserslist
+database.rules.json
+firebase.json
+karma.conf.js
+tsconfig.app.json
+tsconfig.
+tsconfig.spec.json
+tslint.json
