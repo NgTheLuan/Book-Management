@@ -60,3 +60,4 @@ tsconfig.app.json
 tsconfig.
 tsconfig.spec.json
 tslint.json
+package-lock.json
