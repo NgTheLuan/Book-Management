@@ -19,7 +19,7 @@
 - Firestore
 - Other library
 
-![alt](https://drive.google.com/file/d/1BUpfpr35OwusP1PW_kFe8nrHkRjxFWqw/view?usp=sharing)
+![https://res.cloudinary.com/ngtheluan/image/upload/v1629296553/Book-Management/Banner-BM_dcpign.png](https://res.cloudinary.com/ngtheluan/image/upload/v1629296553/Book-Management/Banner-BM_dcpign.png)
 
 ### 📌 Contact me
 
