@@ -19,7 +19,7 @@
 - Firestore
 - Other library
 
-![https://drive.google.com/file/d/1BUpfpr35OwusP1PW_kFe8nrHkRjxFWqw](https://drive.google.com/file/d/1BUpfpr35OwusP1PW_kFe8nrHkRjxFWqw)
+![alt](https://drive.google.com/file/d/1BUpfpr35OwusP1PW_kFe8nrHkRjxFWqw/view?usp=sharing)
 
 ### 📌 Contact me
 
